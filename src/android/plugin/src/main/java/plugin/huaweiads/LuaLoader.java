@@ -65,32 +65,32 @@ public class LuaLoader implements JavaFunction, CoronaRuntimeListener {
     private AdListener bannerAdListener = new AdListener() {
         @Override
         public void onAdLoaded() {
-            dispatchEvent("Ad Loaded", false, "Loaded", "", "Banner");
+            dispatchEvent("Ad Loaded", false, "loaded", "", "banner");
         }
 
         @Override
         public void onAdFailed(int errorCode) {
-            dispatchEvent(errorCode + "", true, "Loaded", "", "Banner");
+            dispatchEvent(errorCode + "", true, "failed", "", "banner");
         }
 
         @Override
         public void onAdOpened() {
-            dispatchEvent("", false, "Openeed", "", "Banner");
+            dispatchEvent("", false, "opened", "", "banner");
         }
 
         @Override
         public void onAdClicked() {
-            dispatchEvent("", false, "Clicked", "", "Banner");
+            dispatchEvent("", false, "clicked", "", "banner");
         }
 
         @Override
         public void onAdLeave() {
-            dispatchEvent("", false, "Leaved", "", "Banner");
+            dispatchEvent("", false, "leave", "", "banner");
         }
 
         @Override
         public void onAdClosed() {
-            dispatchEvent("", false, "Closed", "", "Banner");
+            dispatchEvent("", false, "closed", "", "banner");
         }
     };
 
@@ -98,38 +98,38 @@ public class LuaLoader implements JavaFunction, CoronaRuntimeListener {
         @Override
         public void onAdLoaded() {
             super.onAdLoaded();
-            dispatchEvent("", false, "onAdLoaded", "", "interstitialAd");
+            dispatchEvent("", false, "loaded", "", "interstitialAd");
             showInterstitial();
         }
 
         @Override
         public void onAdFailed(int errorCode) {
-            dispatchEvent("" + errorCode, true, "onAdFailed", "", "interstitialAd");
+            dispatchEvent("" + errorCode, true, "failed", "", "interstitialAd");
         }
 
         @Override
         public void onAdClosed() {
-            dispatchEvent("", false, "onAdClosed", "", "interstitialAd");
+            dispatchEvent("", false, "closed", "", "interstitialAd");
         }
 
         @Override
         public void onAdClicked() {
-            dispatchEvent("", false, "onAdClicked", "", "interstitialAd");
+            dispatchEvent("", false, "clicked", "", "interstitialAd");
         }
 
         @Override
         public void onAdLeave() {
-            dispatchEvent("", false, "onAdLeave", "", "interstitialAd");
+            dispatchEvent("", false, "leave", "", "interstitialAd");
         }
 
         @Override
         public void onAdOpened() {
-            dispatchEvent("", false, "onAdOpened", "", "interstitialAd");
+            dispatchEvent("", false, "opened", "", "interstitialAd");
         }
 
         @Override
         public void onAdImpression() {
-            dispatchEvent("", false, "onAdImpression", "", "interstitialAd");
+            dispatchEvent("", false, "impression", "", "interstitialAd");
         }
     };
 
@@ -478,7 +478,7 @@ public class LuaLoader implements JavaFunction, CoronaRuntimeListener {
          */
         @Override
         public String getName() {
-            return "InterstitialAd";
+            return "interstitialAd";
         }
 
         /**
